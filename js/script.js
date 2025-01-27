@@ -7,16 +7,16 @@ const jump = () => {
 
     setTimeout(() => {
         pato.classList.remove('jump');
-    }, 1500); // Tempo do pulo, ajustado ao CSS
+    }, 1500);
 };
 
 // Loop para verificar colisões
 const loop = setInterval(() => {
     const bolhasPosition = bolhas.offsetLeft; // Posição horizontal das bolhas
-    const patoPosition = parseFloat(window.getComputedStyle(pato).bottom.replace('px', '')); // Posição vertical do pato
+    const patoPosition = parseFloat(window.getComputedStyle(pato).bottom.replace('px', ''));
 
     // Verifica colisão
-    if (bolhasPosition <= 110 && bolhasPosition > 0 && patoPosition < 90) {
+    if (bolhasPosition <= 110 + bolhas.offsetWidth && bolhasPosition > 0 && patoPosition < 90) {
         // Para a animação das bolhas
         bolhas.style.animation = 'none';
         bolhas.style.left = `${bolhasPosition}px`;
