@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid #0011ff;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#183cb5, #1185c8);
+    
+}
+
+.nuvens {
+    position: absolute;
+    width: 800px;
+}
+
+
+
+.bolhas {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    right: -120px;
+    animation: bolhas-animation 3s infinite linear;
+
+}
+
+
+.pato {
+    position: absolute;
+    bottom: 0px;
+    width: 120 px;
+    animation: 1s ease-out;
+}
+
+.jump {
+    animation: pato-jump 1.5s ease-out;
+}
+
+@keyframes bolhas-animation {
+    from{
+        right: -4;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pato-jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+    
+}
