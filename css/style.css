@@ -12,12 +12,15 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(#183cb5, #1185c8);
+    
 }
 
 .nuvens {
     position: absolute;
-    width: 800px;
+    width: 1200px;
 }
+
+
 
 .bolhas {
     position: absolute;
@@ -25,12 +28,14 @@
     width: 120px;
     right: -120px;
     animation: bolhas-animation 3s infinite linear;
+
 }
+
 
 .pato {
     position: absolute;
     bottom: 0px;
-    width: 120px; /* Corrigido */
+    width: 120 px;
     animation: 1s ease-out;
 }
 
@@ -39,28 +44,36 @@
 }
 
 @keyframes bolhas-animation {
-    from {
-        right: -120px; /* Corrigido */
+    from{
+        right: -4;
     }
+
     to {
         right: 100%;
     }
 }
 
 @keyframes pato-jump {
-    0% {
+
+    0%{
         bottom: 0;
     }
-    40% {
+
+    40%{
+        bottom: 180px
+    }
+
+    50%{
         bottom: 180px;
     }
-    50% {
-        bottom: 180px;
+
+    60%{
+        bottom: 180px
     }
-    60% {
-        bottom: 180px;
-    }
-    100% {
+
+    100%{
         bottom: 0;
     }
+
+    
 }
